@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - gy</title>
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+  <!-- 🌐 Navbar -->
+  <nav class="navbar">
+    <div class="logo">gy</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="about.html">📄 About</a></li>
+      <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+      <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🧠 About Section -->
+  <section class="about-section">
+    <div class="about-container">
+      <h1>👋 About gy</h1>
+      <p>gy is a sleek, dark-themed project showcase platform designed for developers and creatives.  
+         Explore innovative projects, download code, and discover UI inspiration with a focus on clean design.</p>
+
+      <div class="profile-card">
+        <img src="avatar.jpg" alt="gy avatar" />
+        <h2>Hi, I’m gy</h2>
+        <p>I’m a front-end developer who loves dark UIs, clean code, and creative web design.  
+           Let’s build cool things together 🚀</p>
+
+        <div class="social-icons">
+          <a href="https://github.com/" class="social-icon github" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com/" class="social-icon twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://telegram.org/" class="social-icon telegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📜 Footer -->
+  <footer>
+    <p>Built by gy · © 2025</p>
+  </footer>
+
+  <!-- 🍔 Menu Toggle Script -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
+
+</body>
+</html>
