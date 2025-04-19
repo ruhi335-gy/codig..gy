@@ -15,24 +15,28 @@ searchInput.addEventListener("input", () => {
 });
 
 // 📤 Share Button Logic
-document.querySelectorAll(".share-btn").forEach((btn) => {
-  btn.addEventListener("click", async () => {
-    const title = btn.dataset.title;
-    const text = btn.dataset.text;
-    const url = btn.dataset.url;
+document.querySelectorAll('.share-btn').forEach(button => {
+  button.addEventListener('click', async () => {
+    const title = button.getAttribute('data-title');
+    const url = button.getAttribute('data-url');
 
     if (navigator.share) {
       try {
-        await navigator.share({ title, text, url });
-        console.log("Project shared successfully!");
+        await navigator.share({
+          title: title,
+          text: `Check out this project: ${title}`,
+          url: url,
+        });
+        console.log('Shared successfully');
       } catch (err) {
-        console.error("Error sharing project:", err);
+        console.error('Error sharing:', err);
       }
     } else {
-      alert("Your browser doesn't support the Web Share API.");
+      alert('Sharing is not supported on this browser.');
     }
   });
 });
+
 
 // ✉️ Feedback Form Handling
 const feedbackForm = document.getElementById("feedback-form");
